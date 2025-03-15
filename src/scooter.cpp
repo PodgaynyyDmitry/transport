@@ -1,4 +1,4 @@
-#include "../include/Scooter.h"
+#include "../include/scooter.h"
 
 string Scooter::getTypeName() const {
     return "самокат";

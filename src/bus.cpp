@@ -1,4 +1,4 @@
-#include "../include/Bus.h"
+#include "../include/bus.h"
 #include <iostream>
 
 string Bus::getTypeName() const {

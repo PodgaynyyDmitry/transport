@@ -1,4 +1,4 @@
-#include "../include/Motorcycle.h"
+#include "../include/motorcycle.h"
 
 string Motorcycle::getTypeName() const {
     return "мотоцикл";

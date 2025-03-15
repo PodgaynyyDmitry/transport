@@ -1,8 +1,8 @@
-#include "../include/TransportFactory.h"
-#include "../include/Motorcycle.h"
-#include "../include/Scooter.h"
-#include "../include/Car.h"
-#include "../include/Bus.h"
+#include "../include/transportfactory.h"
+#include "../include/motorcycle.h"
+#include "../include/scooter.h"
+#include "../include/car.h"
+#include "../include/bus.h"
 
 unique_ptr<Transport> TransportFactory::createTransport(int typeCode) {
     switch (typeCode) {
