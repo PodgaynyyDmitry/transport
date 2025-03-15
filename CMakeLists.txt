@@ -1,24 +1,12 @@
-cmake_minimum_required(VERSION 3.16)
-
-project(transport LANGUAGES CXX)
-
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
+cmake_minimum_required(VERSION 3.10)
+project(transport)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
-
-add_executable(transport
-  main.cpp
-)
-target_link_libraries(transport Qt${QT_VERSION_MAJOR}::Core)
-
-include(GNUInstallDirs)
-install(TARGETS transport
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
+add_executable(transport main.cpp
+    include/transport.h src/transport.cpp
+    include/motorcycle.h src/motorcycle.cpp
+    include/scooter.h src/scooter.cpp
+    include/car.h src/car.cpp
+    include/bus.h src/bus.cpp)
