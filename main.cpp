@@ -1,11 +1,17 @@
 #include <iostream>
 #include <string>
-#include <windows.h>
+
+#ifdef _WIN32
+    #include <windows.h>
+#endif
+
 #include "include/transportfactory.h"
 
 int main(int argc, char* argv[]) {
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
+#ifdef _WIN32
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
+#endif
 
     if (argc == 1) {
         cout << "Запустите приложение с параметрами...";
