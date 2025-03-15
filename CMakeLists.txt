@@ -9,4 +9,5 @@ add_executable(transport main.cpp
     include/motorcycle.h src/motorcycle.cpp
     include/scooter.h src/scooter.cpp
     include/car.h src/car.cpp
-    include/bus.h src/bus.cpp)
+    include/bus.h src/bus.cpp
+    include/transportfactory.h src/transportfactory.cpp)
